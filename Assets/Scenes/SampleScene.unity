@@ -862,8 +862,8 @@ MonoBehaviour:
     mantissa: 0
     exponent: 0
   upgradeCost10: 100
-  upgradeText6: {fileID: 2115235269}
-  upgradeCostText6: {fileID: 574184087}
+  upgradeText6: {fileID: 1942832352}
+  upgradeCostText6: {fileID: 547032734}
   purchaseButton6: {fileID: 63538487}
   upgradeText7: {fileID: 42537381}
   upgradeCostText7: {fileID: 2022344436}
