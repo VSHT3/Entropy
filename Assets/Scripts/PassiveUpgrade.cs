@@ -100,13 +100,53 @@ public class PassiveUpgrade : MonoBehaviour
     public TextMeshProUGUI upgradeCostText8; // Drag your UI element for showing cost here
     public Button purchaseButton8; // Drag the button here in the Inspector
 
-    public TextMeshProUGUI upgradeText9; // Drag your UI element for showing upgrade level here
-    public TextMeshProUGUI upgradeCostText9; // Drag your UI element for showing cost here
-    public Button purchaseButton9; // Drag the button here in the Inspector
+    public TextMeshProUGUI upgradeText9;
+    public TextMeshProUGUI upgradeCostText9;
+    public Button purchaseButton9;
 
     public TextMeshProUGUI upgradeText10;
     public TextMeshProUGUI upgradeCostText10;
     public Button purchaseButton10;
+
+    public TextMeshProUGUI upgradeText11;
+    public TextMeshProUGUI upgradeCostText11;
+    public Button purchaseButton11;
+
+    public TextMeshProUGUI upgradeText12;
+    public TextMeshProUGUI upgradeCostText12;
+    public Button purchaseButton12;
+
+    public TextMeshProUGUI upgradeText13;
+    public TextMeshProUGUI upgradeCostText13;
+    public Button purchaseButton13;
+
+    public TextMeshProUGUI upgradeText14;
+    public TextMeshProUGUI upgradeCostText14;
+    public Button purchaseButton14;
+
+    public TextMeshProUGUI upgradeText15;
+    public TextMeshProUGUI upgradeCostText15;
+    public Button purchaseButton15;
+
+    public TextMeshProUGUI upgradeText16;
+    public TextMeshProUGUI upgradeCostText16;
+    public Button purchaseButton16;
+
+    public TextMeshProUGUI upgradeText17;
+    public TextMeshProUGUI upgradeCostText17;
+    public Button purchaseButton17;
+
+    public TextMeshProUGUI upgradeText18;
+    public TextMeshProUGUI upgradeCostText18;
+    public Button purchaseButton18;
+
+    public TextMeshProUGUI upgradeText19;
+    public TextMeshProUGUI upgradeCostText19;
+    public Button purchaseButton19;
+
+    public TextMeshProUGUI upgradeText20;
+    public TextMeshProUGUI upgradeCostText20;
+    public Button purchaseButton20;
 
     void Start()
     {
@@ -120,6 +160,16 @@ public class PassiveUpgrade : MonoBehaviour
         purchaseButton8.onClick.AddListener(BuyUpgrade8);
         purchaseButton9.onClick.AddListener(BuyUpgrade9);
         purchaseButton10.onClick.AddListener(BuyUpgrade10);
+        purchaseButton11.onClick.AddListener(BuyUpgrade11);
+        purchaseButton12.onClick.AddListener(BuyUpgrade12);
+        purchaseButton13.onClick.AddListener(BuyUpgrade13);
+        purchaseButton14.onClick.AddListener(BuyUpgrade14);
+        purchaseButton15.onClick.AddListener(BuyUpgrade15);
+        purchaseButton16.onClick.AddListener(BuyUpgrade16);
+        purchaseButton17.onClick.AddListener(BuyUpgrade17);
+        purchaseButton18.onClick.AddListener(BuyUpgrade18);
+        purchaseButton19.onClick.AddListener(BuyUpgrade19);
+        purchaseButton20.onClick.AddListener(BuyUpgrade20);
     }
 
     void Update()
@@ -294,6 +344,126 @@ public class PassiveUpgrade : MonoBehaviour
         }
     }
 
+    void BuyUpgrade11()
+    {
+        if (gameManager.entropy >= upgradeCost11)
+        {
+            gameManager.entropy -= upgradeCost11;
+            upgradeLevel11 += 1;
+            upgradeCost11 *= costMultiplier;
+            UpdateUI();
+            gameManager.UpdateUI();
+        }
+    }
+
+    void BuyUpgrade12()
+    {
+        if (gameManager.entropy >= upgradeCost12)
+        {
+            gameManager.entropy -= upgradeCost12;
+            upgradeLevel12 += 1;
+            upgradeCost12 *= costMultiplier;
+            UpdateUI();
+            gameManager.UpdateUI();
+        }
+    }
+
+    void BuyUpgrade13()
+    {
+        if (gameManager.entropy >= upgradeCost13)
+        {
+            gameManager.entropy -= upgradeCost13;
+            upgradeLevel13 += 1;
+            upgradeCost13 *= costMultiplier;
+            UpdateUI();
+            gameManager.UpdateUI();
+        }
+    }
+
+    void BuyUpgrade14()
+    {
+        if (gameManager.entropy >= upgradeCost14)
+        {
+            gameManager.entropy -= upgradeCost14;
+            upgradeLevel14 += 1;
+            upgradeCost14 *= costMultiplier;
+            UpdateUI();
+            gameManager.UpdateUI();
+        }
+    }
+
+    void BuyUpgrade15()
+    {
+        if (gameManager.entropy >= upgradeCost15)
+        {
+            gameManager.entropy -= upgradeCost15;
+            upgradeLevel15 += 1;
+            upgradeCost15 *= costMultiplier;
+            UpdateUI();
+            gameManager.UpdateUI();
+        }
+    }
+
+    void BuyUpgrade16()
+    {
+        if (gameManager.entropy >= upgradeCost16)
+        {
+            gameManager.entropy -= upgradeCost16;
+            upgradeLevel16 += 1;
+            upgradeCost16 *= costMultiplier;
+            UpdateUI();
+            gameManager.UpdateUI();
+        }
+    }
+
+    void BuyUpgrade17()
+    {
+        if (gameManager.entropy >= upgradeCost17)
+        {
+            gameManager.entropy -= upgradeCost17;
+            upgradeLevel17 += 1;
+            upgradeCost17 *= costMultiplier;
+            UpdateUI();
+            gameManager.UpdateUI();
+        }
+    }
+
+    void BuyUpgrade18()
+    {
+        if (gameManager.entropy >= upgradeCost18)
+        {
+            gameManager.entropy -= upgradeCost18;
+            upgradeLevel18 += 1;
+            upgradeCost18 *= costMultiplier;
+            UpdateUI();
+            gameManager.UpdateUI();
+        }
+    }
+
+    void BuyUpgrade19()
+    {
+        if (gameManager.entropy >= upgradeCost19)
+        {
+            gameManager.entropy -= upgradeCost19;
+            upgradeLevel19 += 1;
+            upgradeCost19 *= costMultiplier;
+            UpdateUI();
+            gameManager.UpdateUI();
+        }
+    }
+
+    void BuyUpgrade20()
+    {
+        if (gameManager.entropy >= upgradeCost20)
+        {
+            gameManager.entropy -= upgradeCost20;
+            upgradeLevel20 += 1;
+            upgradeCost20 *= costMultiplier;
+            UpdateUI();
+            gameManager.UpdateUI();
+        }
+    }
+
     public void UpdateUI()
     {
         string formattedUpgradeLevel = BigDoubleFormatter.FormatBigDouble(upgradeLevel);
@@ -345,5 +515,55 @@ public class PassiveUpgrade : MonoBehaviour
         string formattedUpgradeCost10 = BigDoubleFormatter.FormatBigDouble(upgradeCost10);
         upgradeText10.text = $"{formattedUpgradeLevel10}";
         upgradeCostText10.text = $"{formattedUpgradeCost10}λ";
+
+        string formattedUpgradeLevel11 = BigDoubleFormatter.FormatBigDouble(upgradeLevel11);
+        string formattedUpgradeCost11 = BigDoubleFormatter.FormatBigDouble(upgradeCost11);
+        upgradeText11.text = $"{formattedUpgradeLevel11}";
+        upgradeCostText11.text = $"{formattedUpgradeCost11}λ";
+
+        string formattedUpgradeLevel12 = BigDoubleFormatter.FormatBigDouble(upgradeLevel12);
+        string formattedUpgradeCost12 = BigDoubleFormatter.FormatBigDouble(upgradeCost12);
+        upgradeText12.text = $"{formattedUpgradeLevel12}";
+        upgradeCostText12.text = $"{formattedUpgradeCost12}λ";
+
+        string formattedUpgradeLevel13 = BigDoubleFormatter.FormatBigDouble(upgradeLevel13);
+        string formattedUpgradeCost13 = BigDoubleFormatter.FormatBigDouble(upgradeCost13);
+        upgradeText13.text = $"{formattedUpgradeLevel13}";
+        upgradeCostText13.text = $"{formattedUpgradeCost13}λ";
+
+        string formattedUpgradeLevel14 = BigDoubleFormatter.FormatBigDouble(upgradeLevel14);
+        string formattedUpgradeCost14 = BigDoubleFormatter.FormatBigDouble(upgradeCost14);
+        upgradeText14.text = $"{formattedUpgradeLevel14}";
+        upgradeCostText14.text = $"{formattedUpgradeCost14}λ";
+
+        string formattedUpgradeLevel15 = BigDoubleFormatter.FormatBigDouble(upgradeLevel15);
+        string formattedUpgradeCost15 = BigDoubleFormatter.FormatBigDouble(upgradeCost15);
+        upgradeText15.text = $"{formattedUpgradeLevel15}";
+        upgradeCostText15.text = $"{formattedUpgradeCost15}λ";
+
+        string formattedUpgradeLevel16 = BigDoubleFormatter.FormatBigDouble(upgradeLevel16);
+        string formattedUpgradeCost16 = BigDoubleFormatter.FormatBigDouble(upgradeCost16);
+        upgradeText16.text = $"{formattedUpgradeLevel16}";
+        upgradeCostText16.text = $"{formattedUpgradeCost16}λ";
+
+        string formattedUpgradeLevel17 = BigDoubleFormatter.FormatBigDouble(upgradeLevel17);
+        string formattedUpgradeCost17 = BigDoubleFormatter.FormatBigDouble(upgradeCost17);
+        upgradeText17.text = $"{formattedUpgradeLevel17}";
+        upgradeCostText17.text = $"{formattedUpgradeCost17}λ";
+
+        string formattedUpgradeLevel18 = BigDoubleFormatter.FormatBigDouble(upgradeLevel18);
+        string formattedUpgradeCost18 = BigDoubleFormatter.FormatBigDouble(upgradeCost18);
+        upgradeText18.text = $"{formattedUpgradeLevel18}";
+        upgradeCostText18.text = $"{formattedUpgradeCost18}λ";
+
+        string formattedUpgradeLevel19 = BigDoubleFormatter.FormatBigDouble(upgradeLevel19);
+        string formattedUpgradeCost19 = BigDoubleFormatter.FormatBigDouble(upgradeCost19);
+        upgradeText19.text = $"{formattedUpgradeLevel19}";
+        upgradeCostText19.text = $"{formattedUpgradeCost19}λ";
+
+        string formattedUpgradeLevel20 = BigDoubleFormatter.FormatBigDouble(upgradeLevel20);
+        string formattedUpgradeCost20 = BigDoubleFormatter.FormatBigDouble(upgradeCost20);
+        upgradeText20.text = $"{formattedUpgradeLevel20}";
+        upgradeCostText20.text = $"{formattedUpgradeCost20}λ";
     }
 }

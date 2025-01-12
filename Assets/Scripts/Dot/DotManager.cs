@@ -36,6 +36,16 @@ public class DotManager : MonoBehaviour
                 for (int i = currentDotCount; i < newDotCount; i++)
                 {
                     SpawnDot();
+                    SpawnDot();
+                    SpawnDot();
+                    SpawnDot();
+                    SpawnDot();
+                    SpawnDot();
+                    SpawnDot();
+                    SpawnDot();
+                    SpawnDot();
+                    SpawnDot();
+                    SpawnDot();
                 }
                 currentDotCount = newDotCount;
             }

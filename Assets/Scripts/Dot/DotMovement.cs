@@ -20,13 +20,6 @@ public class DotMovement : MonoBehaviour
         // Find the EntropyTracker component in the scene
         entropyTracker = Object.FindFirstObjectByType<EntropyTracker>();
 
-
-        // Check if EntropyTracker is found
-        if (entropyTracker == null)
-        {
-            Debug.LogWarning("No EntropyTracker component found in the scene!");
-        }
-
         // Initialize current speed
         currentSpeed = minSpeed; // Start at minimum speed
     }
@@ -36,7 +29,7 @@ public class DotMovement : MonoBehaviour
         // Ensure speed is equal to percentageChange from EntropyTracker
         if (entropyTracker != null)
         {
-            float targetSpeed = Mathf.Clamp((float)entropyTracker.percentageChange / 5, minSpeed, maxSpeed);
+            float targetSpeed = Mathf.Clamp((float)entropyTracker.percentageChange / 2, minSpeed, maxSpeed);
 
             // Accelerate or decelerate towards the target speed
             if (currentSpeed < targetSpeed)
