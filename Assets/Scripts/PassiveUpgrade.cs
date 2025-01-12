@@ -58,6 +58,36 @@ public class PassiveUpgrade : MonoBehaviour
     public BigDouble upgradeLevel10 = 0;
     public float upgradeCost10 = 100f;
 
+    public BigDouble upgradeLevel11 = 0;
+    public float upgradeCost11 = 100f;
+
+    public BigDouble upgradeLevel12 = 0;
+    public float upgradeCost12 = 100f;
+
+    public BigDouble upgradeLevel13 = 0;
+    public float upgradeCost13 = 100f;
+
+    public BigDouble upgradeLevel14 = 0;
+    public float upgradeCost14 = 100f;
+
+    public BigDouble upgradeLevel15 = 0;
+    public float upgradeCost15 = 100f;
+
+    public BigDouble upgradeLevel16 = 0;
+    public float upgradeCost16 = 100f;
+
+    public BigDouble upgradeLevel17 = 0;
+    public float upgradeCost17 = 100f;
+
+    public BigDouble upgradeLevel18 = 0;
+    public float upgradeCost18 = 100f;
+
+    public BigDouble upgradeLevel19 = 0;
+    public float upgradeCost19 = 100f;
+
+    public BigDouble upgradeLevel20 = 0;
+    public float upgradeCost20 = 100f;
+
     public TextMeshProUGUI upgradeText6; // Drag your UI element for showing upgrade level here
     public TextMeshProUGUI upgradeCostText6; // Drag your UI element for showing cost here
     public Button purchaseButton6; // Drag the button here in the Inspector
@@ -74,9 +104,9 @@ public class PassiveUpgrade : MonoBehaviour
     public TextMeshProUGUI upgradeCostText9; // Drag your UI element for showing cost here
     public Button purchaseButton9; // Drag the button here in the Inspector
 
-    public TextMeshProUGUI upgradeText10; // Drag your UI element for showing upgrade level here
-    public TextMeshProUGUI upgradeCostText10; // Drag your UI element for showing cost here
-    public Button purchaseButton10; // Drag the button here in the Inspector
+    public TextMeshProUGUI upgradeText10;
+    public TextMeshProUGUI upgradeCostText10;
+    public Button purchaseButton10;
 
     void Start()
     {
@@ -95,8 +125,38 @@ public class PassiveUpgrade : MonoBehaviour
     void Update()
     {
         // Check if it's time to add entropy passively
-        if (Time.time >= nextEntropyGainTime && (upgradeLevel > 0 || upgradeLevel2 > 0 || upgradeLevel3 > 0 || upgradeLevel4 > 0 || upgradeLevel5 > 0 || upgradeLevel6 > 0 || upgradeLevel7 > 0 || upgradeLevel8 > 0 || upgradeLevel9 > 0 || upgradeLevel10 > 0))
+        if (Time.time >= nextEntropyGainTime &&
+            (upgradeLevel > 0 ||
+             upgradeLevel2 > 0 ||
+             upgradeLevel3 > 0 ||
+             upgradeLevel4 > 0 ||
+             upgradeLevel5 > 0 ||
+             upgradeLevel6 > 0 ||
+             upgradeLevel7 > 0 ||
+             upgradeLevel8 > 0 ||
+             upgradeLevel9 > 0 ||
+             upgradeLevel10 > 0 ||
+             upgradeLevel11 > 0 ||
+             upgradeLevel12 > 0 ||
+             upgradeLevel13 > 0 ||
+             upgradeLevel14 > 0 ||
+             upgradeLevel15 > 0 ||
+             upgradeLevel16 > 0 ||
+             upgradeLevel17 > 0 ||
+             upgradeLevel18 > 0 ||
+             upgradeLevel19 > 0 ||
+             upgradeLevel20 > 0))
         {
+            upgradeLevel19 += entropyGainAmount * upgradeLevel20;
+            upgradeLevel18 += entropyGainAmount * upgradeLevel19;
+            upgradeLevel17 += entropyGainAmount * upgradeLevel18;
+            upgradeLevel16 += entropyGainAmount * upgradeLevel17;
+            upgradeLevel15 += entropyGainAmount * upgradeLevel16;
+            upgradeLevel14 += entropyGainAmount * upgradeLevel15;
+            upgradeLevel13 += entropyGainAmount * upgradeLevel14;
+            upgradeLevel12 += entropyGainAmount * upgradeLevel13;
+            upgradeLevel11 += entropyGainAmount * upgradeLevel12;
+            upgradeLevel10 += entropyGainAmount * upgradeLevel11;
             upgradeLevel9 += entropyGainAmount * upgradeLevel10;
             upgradeLevel8 += entropyGainAmount * upgradeLevel9;
             upgradeLevel7 += entropyGainAmount * upgradeLevel8;
@@ -106,7 +166,7 @@ public class PassiveUpgrade : MonoBehaviour
             upgradeLevel3 += entropyGainAmount * upgradeLevel4;
             upgradeLevel2 += entropyGainAmount * upgradeLevel3;
             upgradeLevel += entropyGainAmount * upgradeLevel2;
-            gameManager.entropy += entropyGainAmount * upgradeLevel; 
+            gameManager.entropy += entropyGainAmount * upgradeLevel;
             gameManager.UpdateUI(); // Update the UI to reflect new entropy
             UpdateUI();
             nextEntropyGainTime = Time.time + entropyGainInterval;
